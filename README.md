@@ -27,10 +27,8 @@ Details about the content of this release are available in the release note [her
 
 ## Compatibility information
 
-Below is the list of the BSP *component* drivers to be used with this BSP *board* driver. It is **crucial** that you use a consistent set of CMSIS - HAL - BSP versions, as mentioned in [this](https://htmlpreview.github.io/?https://github.com/STMicroelectronics/STM32CubeALL/blob/master/Release_Notes.html) release note.
+Please refer to the repository of the BSP **board** driver you are using to know which version of this BSP component driver to use. It is crucial that you use a consistent set of versions as indicated.
 
 ## Troubleshooting
 
-If you have any issue with the **software content** of this repository, you can file an issue [here](https://github.com/STMicroelectronics/stm32-ism330dhcx/issues/new).
-
-For any other question related to the product, the tools, the environment, you can submit a post to the **ST Community** on the appropriate topic [page](https://community.st.com/s/topiccatalog).
+Please refer to the [CONTRIBUTING.md](CONTRIBUTING.md) guide.

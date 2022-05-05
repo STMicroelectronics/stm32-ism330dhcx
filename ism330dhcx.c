@@ -1,21 +1,20 @@
 /**
- ******************************************************************************
- * @file    ism330dhcx.c
- * @author  MEMS Software Solutions Team
- * @brief   ISM330DHCX driver file
- ******************************************************************************
- * @attention
- *
- * <h2><center>&copy; Copyright (c) 2019 STMicroelectronics.
- * All rights reserved.</center></h2>
- *
- * This software component is licensed by ST under BSD 3-Clause license,
- * the "License"; You may not use this file except in compliance with the
- * License. You may obtain a copy of the License at:
- *                        opensource.org/licenses/BSD-3-Clause
- *
- ******************************************************************************
- */
+  ******************************************************************************
+  * @file    ism330dhcx.c
+  * @author  MEMS Software Solutions Team
+  * @brief   ISM330DHCX driver file
+  ******************************************************************************
+  * @attention
+  *
+  * Copyright (c) 2019 STMicroelectronics.
+  * All rights reserved.
+  *
+  * This software is licensed under terms that can be found in the LICENSE file
+  * in the root directory of this software component.
+  * If no LICENSE file comes with this software, it is provided AS-IS.
+  *
+  ******************************************************************************
+  */
 
 /* Includes ------------------------------------------------------------------*/
 #include "ism330dhcx.h"
@@ -157,6 +156,12 @@ int32_t ISM330DHCX_RegisterBusIO(ISM330DHCX_Object_t *pObj, ISM330DHCX_IO_t *pIO
  */
 int32_t ISM330DHCX_Init(ISM330DHCX_Object_t *pObj)
 {
+  /* Set DEVICE_CONF bit */
+  if (ism330dhcx_device_conf_set(&(pObj->Ctx), PROPERTY_ENABLE) != ISM330DHCX_OK)
+  {
+    return ISM330DHCX_ERROR;
+  }
+
   /* Enable register address automatically incremented during a multiple byte
   access with a serial interface. */
   if (ism330dhcx_auto_increment_set(&(pObj->Ctx), PROPERTY_ENABLE) != ISM330DHCX_OK)
@@ -3029,5 +3034,3 @@ static int32_t WriteRegWrap(void *Handle, uint8_t Reg, uint8_t *pData, uint16_t 
 /**
   * @}
   */
-
-/************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/
