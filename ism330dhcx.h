@@ -30,20 +30,20 @@ extern "C"
 #include <string.h>
 
 /** @addtogroup BSP BSP
- * @{
- */
+  * @{
+  */
 
 /** @addtogroup Component Component
- * @{
- */
+  * @{
+  */
 
 /** @addtogroup ISM330DHCX ISM330DHCX
- * @{
- */
+  * @{
+  */
 
 /** @defgroup ISM330DHCX_Exported_Types ISM330DHCX Exported Types
- * @{
- */
+  * @{
+  */
 
 typedef int32_t (*ISM330DHCX_Init_Func)(void);
 typedef int32_t (*ISM330DHCX_DeInit_Func)(void);
@@ -153,33 +153,37 @@ typedef struct
   int32_t (*GetAxesRaw)(ISM330DHCX_Object_t *, ISM330DHCX_AxesRaw_t *);
 } ISM330DHCX_GYRO_Drv_t;
 
-typedef union{
+typedef union
+{
   int16_t i16bit[3];
   uint8_t u8bit[6];
 } ism330dhcx_axis3bit16_t;
 
-typedef union{
+typedef union
+{
   int16_t i16bit;
   uint8_t u8bit[2];
 } ism330dhcx_axis1bit16_t;
 
-typedef union{
+typedef union
+{
   int32_t i32bit[3];
   uint8_t u8bit[12];
 } ism330dhcx_axis3bit32_t;
 
-typedef union{
+typedef union
+{
   int32_t i32bit;
   uint8_t u8bit[4];
 } ism330dhcx_axis1bit32_t;
 
 /**
- * @}
- */
+  * @}
+  */
 
 /** @defgroup ISM330DHCX_Exported_Constants ISM330DHCX Exported Constants
- * @{
- */
+  * @{
+  */
 
 #define ISM330DHCX_OK                       0
 #define ISM330DHCX_ERROR                   -1
@@ -201,12 +205,12 @@ typedef union{
 #define ISM330DHCX_GYRO_SENSITIVITY_FS_4000DPS 140.000f
 
 /**
- * @}
- */
+  * @}
+  */
 
 /** @addtogroup ISM330DHCX_Exported_Functions ISM330DHCX Exported Functions
- * @{
- */
+  * @{
+  */
 
 int32_t ISM330DHCX_RegisterBusIO(ISM330DHCX_Object_t *pObj, ISM330DHCX_IO_t *pIO);
 int32_t ISM330DHCX_Init(ISM330DHCX_Object_t *pObj);
@@ -311,20 +315,20 @@ int32_t ISM330DHCX_GYRO_Disable_DRDY_On_INT2(ISM330DHCX_Object_t *pObj);
 int32_t ISM330DHCX_DRDY_Set_Mode(ISM330DHCX_Object_t *pObj, uint8_t Mode);
 
 /**
- * @}
- */
+  * @}
+  */
 
 /** @addtogroup ISM330DHCX_Exported_Variables ISM330DHCX Exported Variables
- * @{
- */
+  * @{
+  */
 
 extern ISM330DHCX_CommonDrv_t ISM330DHCX_COMMON_Driver;
 extern ISM330DHCX_ACC_Drv_t ISM330DHCX_ACC_Driver;
 extern ISM330DHCX_GYRO_Drv_t ISM330DHCX_GYRO_Driver;
 
 /**
- * @}
- */
+  * @}
+  */
 
 #ifdef __cplusplus
 }
@@ -333,13 +337,13 @@ extern ISM330DHCX_GYRO_Drv_t ISM330DHCX_GYRO_Driver;
 #endif
 
 /**
- * @}
- */
+  * @}
+  */
 
 /**
- * @}
- */
+  * @}
+  */
 
 /**
- * @}
- */
+  * @}
+  */
