@@ -48,7 +48,7 @@ extern "C"
 typedef int32_t (*ISM330DHCX_Init_Func)(void);
 typedef int32_t (*ISM330DHCX_DeInit_Func)(void);
 typedef int32_t (*ISM330DHCX_GetTick_Func)(void);
-typedef void    (*ISM330DHCX_Delay_Func)(uint32_t);
+typedef void (*ISM330DHCX_Delay_Func)(uint32_t);
 typedef int32_t (*ISM330DHCX_WriteReg_Func)(uint16_t, uint16_t, uint8_t *, uint16_t);
 typedef int32_t (*ISM330DHCX_ReadReg_Func)(uint16_t, uint16_t, uint8_t *, uint16_t);
 
@@ -326,6 +326,11 @@ int32_t ISM330DHCX_GYRO_Enable_DRDY_On_INT2(ISM330DHCX_Object_t *pObj);
 int32_t ISM330DHCX_GYRO_Disable_DRDY_On_INT2(ISM330DHCX_Object_t *pObj);
 
 int32_t ISM330DHCX_DRDY_Set_Mode(ISM330DHCX_Object_t *pObj, uint8_t Mode);
+
+int32_t ISM330DHCX_ACC_GetActualOutputDataRate(ISM330DHCX_Object_t *pObj, float *ActualOdr);
+int32_t ISM330DHCX_GYRO_GetActualOutputDataRate(ISM330DHCX_Object_t *pObj, float *ActualOdr);
+
+int32_t ISM330DHCX_Set_Mem_Bank(ISM330DHCX_Object_t *pObj, uint8_t Val);
 
 /**
   * @}
