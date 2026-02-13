@@ -1,6 +1,6 @@
 # BSP STM32-ISM330DHCX Component
 
-![latest tag](https://img.shields.io/github/v/tag/STMicroelectronics/stm32-ism330dhcx.svg?color=brightgreen)
+![tag](https://img.shields.io/badge/tag-v1.7.0-brightgreen.svg)
 
 ## Overview
 
